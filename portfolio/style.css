@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+body {
+  background-color: #191924;
+  overflow-x: auto;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.page {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Navigation */
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f4a261;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("hero-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.hero h1 span {
+  color: #f4a261;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background: #6c67ff;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #3f2eff;
+}
+
+/* Sections */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.header {
+  font-size: 40px;
+  color: #5767de;
+  text-align: center;
+  padding-top: 135px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.skill {
+  background: #4946ff;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+#about p {
+  text-align: justify;
+  font-size: 20px;
+  color: #c2c2c2;
+}
+
+/* Projects Section */
+#project-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#projects {
+  flex-basis: 320px;
+  display: flex;
+  height: 500px;
+  border-radius: 12px;
+  margin: 20px;
+  flex-wrap: wrap;
+  transition: 0.35s ease-in-out;
+  padding: 24px;
+  background-color: rgb(23, 23, 33);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+#projects:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0.5px 0.5px 50px rgb(0, 0, 0);
+}
+
+#projects img {
+  width: 100%;
+  height: 153px;
+  border-radius: 6px;
+  display: block;
+}
+#projects span {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212122;
+  font-size: 12px;
+  color: #8330f7;
+  border-radius: 10px;
+  padding: 13px 9px;
+  margin: 4px 10px 2px 5px;
+  border: none;
+  font-weight: 500;
+}
+#projects h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+#projects p {
+  color: #abb1bf;
+  text-align: justify;
+  font-size: 13px;
+  font-weight: 400;
+}
+#projects .viewLink {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+#projects .viewLink button {
+  width: 120px;
+  background-color: #4f63ff;
+  border: none;
+  padding: 9px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  transition: 0.35s ease-in-out;
+  margin-right: 5px;
+  color: rgb(226, 226, 226);
+  cursor: pointer;
+}
+#projects .viewLink .live {
+  background-color: #8b0fff;
+}
+#projects .viewLink .view:hover {
+  background-color: rgb(15, 0, 149);
+}
+#projects .viewLink .live:hover {
+  background-color: indigo;
+}
+.viewLink a {
+  text-decoration: none;
+}
+.uses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Contact */
+.contact-info p {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #f4a261;
+}
+
+.contact-info a {
+  color: #f4a261;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: #e76f51;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 16px;
+}
